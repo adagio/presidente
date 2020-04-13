@@ -1,0 +1,14 @@
+[
+    {"model": "presidente.cardtype", "pk": 1, "fields": {"name": "ataque"}},
+    {"model": "presidente.cardtype", "pk": 2, "fields": {"name": "dinero"}},
+    {"model": "presidente.cardtype", "pk": 3, "fields": {"name": "votos"}},
+    {"model": "presidente.cardtype", "pk": 4, "fields": {"name": "blindaje"}},
+    {"model": "presidente.cardtype", "pk": 5, "fields": {"name": "poder"}},
+    {"model": "presidente.card", "pk": 1, "fields": {"text": "Yo no fui", "card_type": 4, "requirements": 5, "is_corrupt": false}},
+    {"model": "presidente.card", "pk": 2, "fields": {"text": "Se difunde tu foto junto a funcionario corrupto", "card_type": 1, "requirements": null, "is_corrupt": false}},
+    {"model": "presidente.card", "pk": 3, "fields": {"text": "Inexplicable cuenta bancaria en para\u00edso fiscal", "card_type": 2, "requirements": null, "is_corrupt": true}},
+    {"model": "presidente.card", "pk": 4, "fields": {"text": "Se investigan las actividades de tus empresas", "card_type": 1, "requirements": null, "is_corrupt": false}},
+    {"model": "presidente.card", "pk": 5, "fields": {"text": "Recibo herencia de mi t\u00eda rica", "card_type": 2, "requirements": null, "is_corrupt": false}},
+    {"model": "presidente.card", "pk": 7, "fields": {"text": "Me pongo muy serio cuando hablo", "card_type": 3, "requirements": null, "is_corrupt": false}},
+    {"model": "presidente.votescard", "pk": 7, "fields": {"votes": 3}}
+]
