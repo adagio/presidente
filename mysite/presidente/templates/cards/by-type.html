@@ -1,0 +1,68 @@
+
+<a href="/presidente/">Cards</a> | <a href="/presidente/cards-by-type">By Type</a>
+
+<br /><br />
+
+🗳️ Votos ({{votes_card_list.count}})
+
+{% if votes_card_list %}
+    <ul>
+    {% for card in votes_card_list %}
+        <li>[{{ card.votes }}%] {{ card.text }}
+            {% if card.requirements.all %}
+            Reqs: {% for requirement in card.requirements.all %}{{requirement.emoji}}{% endfor %}
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No cards are available.</p>
+{% endif %}
+
+⚔️ Ataque ({{attack_card_list.count}})
+
+{% if attack_card_list %}
+    <ul>
+    {% for card in attack_card_list %}
+        <li>{% if card.only_attacks_corrupt %}🐀{% endif %} {{ card.text }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No cards are available.</p>
+{% endif %}
+
+🛡️ Blindaje ({{shield_card_list.count}})
+
+{% if shield_card_list %}
+    <ul>
+    {% for card in shield_card_list %}
+        <li>{{ card.text }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No cards are available.</p>
+{% endif %}
+
+💰 Dinero ({{money_card_list.count}})
+
+{% if money_card_list %}
+    <ul>
+    {% for card in money_card_list %}
+        <li>{{ card.text }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No cards are available.</p>
+{% endif %}
+
+👑 Poder ({{power_card_list.count}})
+
+{% if power_card_list %}
+    <ul>
+    {% for card in power_card_list %}
+        <li>{{ card.text }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No cards are available.</p>
+{% endif %}

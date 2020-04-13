@@ -1,0 +1,21 @@
+
+<a href="/presidente/">Cards</a> | <a href="/presidente/cards-by-type">By Type</a>
+
+<br /><br />
+
+Cards ({{latest_card_list.count}})
+
+{% if latest_card_list %}
+    <ul>
+    {% for card in latest_card_list %}
+        <li><a href="/presidente/card/{{ card.id }}/">[link]</a>
+            [{{card.card_type.emoji}}] {% if card.is_corrupt %}🐀{% endif %} {{ card.text }}.
+            {% if card.requirements.all %}
+            Reqs: {% for requirement in card.requirements.all %}{{requirement.emoji}}{% endfor %}
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No cards are available.</p>
+{% endif %}

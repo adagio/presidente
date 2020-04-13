@@ -1,14 +1,425 @@
 [
-    {"model": "presidente.cardtype", "pk": 1, "fields": {"name": "ataque"}},
-    {"model": "presidente.cardtype", "pk": 2, "fields": {"name": "dinero"}},
-    {"model": "presidente.cardtype", "pk": 3, "fields": {"name": "votos"}},
-    {"model": "presidente.cardtype", "pk": 4, "fields": {"name": "blindaje"}},
-    {"model": "presidente.cardtype", "pk": 5, "fields": {"name": "poder"}},
-    {"model": "presidente.card", "pk": 1, "fields": {"text": "Yo no fui", "card_type": 4, "requirements": 5, "is_corrupt": false}},
-    {"model": "presidente.card", "pk": 2, "fields": {"text": "Se difunde tu foto junto a funcionario corrupto", "card_type": 1, "requirements": null, "is_corrupt": false}},
-    {"model": "presidente.card", "pk": 3, "fields": {"text": "Inexplicable cuenta bancaria en para\u00edso fiscal", "card_type": 2, "requirements": null, "is_corrupt": true}},
-    {"model": "presidente.card", "pk": 4, "fields": {"text": "Se investigan las actividades de tus empresas", "card_type": 1, "requirements": null, "is_corrupt": false}},
-    {"model": "presidente.card", "pk": 5, "fields": {"text": "Recibo herencia de mi t\u00eda rica", "card_type": 2, "requirements": null, "is_corrupt": false}},
-    {"model": "presidente.card", "pk": 7, "fields": {"text": "Me pongo muy serio cuando hablo", "card_type": 3, "requirements": null, "is_corrupt": false}},
-    {"model": "presidente.votescard", "pk": 7, "fields": {"votes": 3}}
+{
+  "model": "presidente.cardtype",
+  "pk": 1,
+  "fields": {
+    "name": "ataque"
+  }
+},
+{
+  "model": "presidente.cardtype",
+  "pk": 2,
+  "fields": {
+    "name": "dinero"
+  }
+},
+{
+  "model": "presidente.cardtype",
+  "pk": 3,
+  "fields": {
+    "name": "votos"
+  }
+},
+{
+  "model": "presidente.cardtype",
+  "pk": 4,
+  "fields": {
+    "name": "blindaje"
+  }
+},
+{
+  "model": "presidente.cardtype",
+  "pk": 5,
+  "fields": {
+    "name": "poder"
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 1,
+  "fields": {
+    "text": "Yo no fui",
+    "card_type": 4,
+    "is_corrupt": false,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 3,
+  "fields": {
+    "text": "Inexplicable cuenta bancaria en para\u00edso fiscal",
+    "card_type": 2,
+    "is_corrupt": true,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 5,
+  "fields": {
+    "text": "Recibo herencia de mi t\u00eda rica",
+    "card_type": 2,
+    "is_corrupt": false,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 7,
+  "fields": {
+    "text": "Me pongo muy serio cuando hablo",
+    "card_type": 3,
+    "is_corrupt": false,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 8,
+  "fields": {
+    "text": "Campa\u00f1a en Tacna, Punto y Moquegua",
+    "card_type": 3,
+    "is_corrupt": false,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 9,
+  "fields": {
+    "text": "Consigo financistas",
+    "card_type": 2,
+    "is_corrupt": true,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 10,
+  "fields": {
+    "text": "Tenemos mayor\u00eda en el contgreso",
+    "card_type": 5,
+    "is_corrupt": false,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 11,
+  "fields": {
+    "text": "Robo pero hago obra",
+    "card_type": 3,
+    "is_corrupt": true,
+    "requirements": [
+      2,
+      5
+    ]
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 16,
+  "fields": {
+    "text": "Se difunde tu foto junto a funcionario corrupto",
+    "card_type": 1,
+    "is_corrupt": false,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 17,
+  "fields": {
+    "text": "No apareces en las \u00faltimas encuestas",
+    "card_type": 1,
+    "is_corrupt": false,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 18,
+  "fields": {
+    "text": "No te comiste el chicharr\u00f3n",
+    "card_type": 1,
+    "is_corrupt": false,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 19,
+  "fields": {
+    "text": "Se investigan las actividades de tus empresas",
+    "card_type": 1,
+    "is_corrupt": false,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 20,
+  "fields": {
+    "text": "Se difunde un video comprometedor",
+    "card_type": 1,
+    "is_corrupt": false,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 21,
+  "fields": {
+    "text": "Te nombran padrino de promoci\u00f3n",
+    "card_type": 1,
+    "is_corrupt": false,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 22,
+  "fields": {
+    "text": "Se hace p\u00fablica tu vida privada",
+    "card_type": 1,
+    "is_corrupt": false,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 23,
+  "fields": {
+    "text": "Armo una cortina de humo",
+    "card_type": 4,
+    "is_corrupt": false,
+    "requirements": [
+      5
+    ]
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 24,
+  "fields": {
+    "text": "Me tomo una foto con un ni\u00f1o",
+    "card_type": 3,
+    "is_corrupt": false,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 25,
+  "fields": {
+    "text": "Se difunden tus audios",
+    "card_type": 1,
+    "is_corrupt": false,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 26,
+  "fields": {
+    "text": "Campa\u00f1a en Ancash, Pasco y Hu\u00e1nuco",
+    "card_type": 3,
+    "is_corrupt": false,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 27,
+  "fields": {
+    "text": "Campa\u00f1a en San Mart\u00edn, Ucayali y Loreto",
+    "card_type": 3,
+    "is_corrupt": false,
+    "requirements": [
+      2
+    ]
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 28,
+  "fields": {
+    "text": "Campa\u00f1a en Lambayeque y La Libertad",
+    "card_type": 3,
+    "is_corrupt": false,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 29,
+  "fields": {
+    "text": "Campa\u00f1a en Cajamarca y Amazonas",
+    "card_type": 3,
+    "is_corrupt": false,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 30,
+  "fields": {
+    "text": "Me declaro perseguido pol\u00edtico",
+    "card_type": 4,
+    "is_corrupt": false,
+    "requirements": [
+      5
+    ]
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 31,
+  "fields": {
+    "text": "No me acuerdo",
+    "card_type": 4,
+    "is_corrupt": false,
+    "requirements": [
+      5
+    ]
+  }
+},
+{
+  "model": "presidente.card",
+  "pk": 32,
+  "fields": {
+    "text": "Soy un candidato de lujo",
+    "card_type": 3,
+    "is_corrupt": false,
+    "requirements": []
+  }
+},
+{
+  "model": "presidente.votescard",
+  "pk": 7,
+  "fields": {
+    "votes": 3
+  }
+},
+{
+  "model": "presidente.votescard",
+  "pk": 8,
+  "fields": {
+    "votes": 3
+  }
+},
+{
+  "model": "presidente.votescard",
+  "pk": 11,
+  "fields": {
+    "votes": 7
+  }
+},
+{
+  "model": "presidente.votescard",
+  "pk": 24,
+  "fields": {
+    "votes": 3
+  }
+},
+{
+  "model": "presidente.votescard",
+  "pk": 26,
+  "fields": {
+    "votes": 3
+  }
+},
+{
+  "model": "presidente.votescard",
+  "pk": 27,
+  "fields": {
+    "votes": 3
+  }
+},
+{
+  "model": "presidente.votescard",
+  "pk": 28,
+  "fields": {
+    "votes": 1
+  }
+},
+{
+  "model": "presidente.votescard",
+  "pk": 29,
+  "fields": {
+    "votes": 1
+  }
+},
+{
+  "model": "presidente.votescard",
+  "pk": 32,
+  "fields": {
+    "votes": 1
+  }
+},
+{
+  "model": "presidente.attackcard",
+  "pk": 16,
+  "fields": {
+    "only_attacks_corrupt": false,
+    "attack_type": 5
+  }
+},
+{
+  "model": "presidente.attackcard",
+  "pk": 17,
+  "fields": {
+    "only_attacks_corrupt": false,
+    "attack_type": 5
+  }
+},
+{
+  "model": "presidente.attackcard",
+  "pk": 18,
+  "fields": {
+    "only_attacks_corrupt": false,
+    "attack_type": 3
+  }
+},
+{
+  "model": "presidente.attackcard",
+  "pk": 19,
+  "fields": {
+    "only_attacks_corrupt": true,
+    "attack_type": 2
+  }
+},
+{
+  "model": "presidente.attackcard",
+  "pk": 20,
+  "fields": {
+    "only_attacks_corrupt": true,
+    "attack_type": 5
+  }
+},
+{
+  "model": "presidente.attackcard",
+  "pk": 21,
+  "fields": {
+    "only_attacks_corrupt": false,
+    "attack_type": 2
+  }
+},
+{
+  "model": "presidente.attackcard",
+  "pk": 22,
+  "fields": {
+    "only_attacks_corrupt": false,
+    "attack_type": 3
+  }
+},
+{
+  "model": "presidente.attackcard",
+  "pk": 25,
+  "fields": {
+    "only_attacks_corrupt": false,
+    "attack_type": 5
+  }
+}
 ]
